@@ -87,7 +87,7 @@ class Broker{
     public function izmeniProfesora($id,$ime,$prezime,$zvanje,$katedra){
         $this->izvrsiUpit("select id from katedra where sef=".$id);
         $staraKatedra=$this->rezultat->fetch_object();
-        if(isset($staraKatedra)){
+        if(isset($staraKatedra) && $staraKatedra->id!==$katedra){
             $this->izvrsiUpit("update katedra set sef=NULL where id=".$staraKatedra->id);
         }
 

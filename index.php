@@ -113,10 +113,7 @@
                     }
                     
                     $("#sef-name").val(sef);
-                    if (data.status !== "ok") {
-                        alert(data.status);
-                        return;
-                    }
+                    
 
                 })
 

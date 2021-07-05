@@ -1,5 +1,6 @@
 <?php
     include "broker.php";
+
     $broker=Broker::getBroker();
     $broker->vratiProfesoreSaKatedre($_GET["katedra"]);
     $res=array();
